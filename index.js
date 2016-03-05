@@ -1,3 +1,4 @@
 var shlue = require('./shlue');
+var config = require('./config');
 
-shlue.listen(8080);
+shlue.listen(config.server.port);
