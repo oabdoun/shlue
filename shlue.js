@@ -8,10 +8,10 @@ var shlue = express();
 shlue.use(bodyParser.urlencoded({ extended: false }));
 module.exports = shlue;
 
-var hashids = new Hashids('salt');
-
 var config = require('./config');
 var store = redis.createClient(config.redis);
+
+var hashids = new Hashids(config.shlue.salt);
 
 /**
  * Shortens a URL.
