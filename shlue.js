@@ -10,7 +10,8 @@ module.exports = shlue;
 
 var hashids = new Hashids('salt');
 
-var store = redis.createClient();
+var config = require('./config');
+var store = redis.createClient(config.redis);
 
 /**
  * Shortens a URL.
