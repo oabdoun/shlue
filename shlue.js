@@ -42,6 +42,11 @@ shlue.route('/')
 	});
 });
 
+/**
+ * Resolves a URL from shorten code
+ * GET with path as shorten code
+ * returns 302 + Location = original URL, 404 if no mapping found or error
+ */
 shlue.route('/:code')
 .get(function (req, res) {
 	// load mapped url
