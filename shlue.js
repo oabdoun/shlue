@@ -45,7 +45,7 @@ shlue.route('/')
 shlue.route('/:code')
 .get(function (req, res) {
 	// load mapped url
-	store.get('shlue:url:' + req.params['code'], function (err, url) {
+	store.get('shlue:url:' + req.params.code, function (err, url) {
 		// url not found
 		if (err || !url)  res.status(404).end();
 		// redirect to url
