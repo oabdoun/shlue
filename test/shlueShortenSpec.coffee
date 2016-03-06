@@ -3,6 +3,9 @@ url = require 'url'
 
 shlue = require '../shlue'
 
+log = require '../log'
+log.level 'fatal'
+
 isShortUrl = (url) -> /^http:\/\/127\.0\.0\.1:\d+\/[a-zA-Z0-9]+$/.test url
 
 describe 'shlue shorten', ->

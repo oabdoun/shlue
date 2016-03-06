@@ -3,6 +3,9 @@ url = require 'url'
 
 shlue = require '../shlue'
 
+log = require '../log'
+log.level 'fatal'
+
 describe 'shlue resolve', ->
 	r = request shlue
 	short = null
